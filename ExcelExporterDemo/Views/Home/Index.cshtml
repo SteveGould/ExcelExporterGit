@@ -1,0 +1,28 @@
+﻿@{
+	ViewBag.Title = "Excel Export";
+}
+
+<h2>Excel Export</h2>
+<br />
+<br />
+<input id="btnNo" type="button" value="Export No Formatting" />
+<br />
+<br />
+<br />
+<input id="btnWith" type="button" value="Export With Formatting" />
+
+<script type="text/javascript">
+	$(document).ready(function ()
+	{
+		$("#btnNo").click(function (e)
+		{
+			location.href = "@Url.Action("ExportNoFormatting", "Home")";
+		});
+
+		$("#btnWith").click(function (e)
+		{
+			location.href = "@Url.Action("ExportWithFormatting", "Home")";
+		});
+
+	});
+</script>
